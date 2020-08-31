@@ -1,0 +1,11 @@
+---
+- name: Start {{ docker_name }} docker container
+  docker_container:
+    name: '{{ docker_name }}'
+    image: 'cruise/webviz'
+    ports:
+      - '{{ port }}:8080'
+    restart_policy: 'unless-stopped'
+    env:
+      ROS_MASTER_URI: '{{ ros_master_uri }}'
+      ROS_IP: '{{ ros_ip }}'
