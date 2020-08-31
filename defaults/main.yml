@@ -5,6 +5,6 @@ ros_master_uri: 'http://{{ ansible_ssh_host }}:11311'
 
 cpu_arch: 'latest'
 
-docker_name: 'ros_jviz'
+docker_name: 'ros_webviz'
 
 port: '8080'
