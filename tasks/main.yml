@@ -2,7 +2,7 @@
 - name: Start {{ docker_name }} docker container
   docker_container:
     name: '{{ docker_name }}'
-    image: 'cruise/webviz'
+    image: 'frankjoshua/ros-webviz'
     ports:
       - '{{ port }}:8080'
     restart_policy: 'unless-stopped'
