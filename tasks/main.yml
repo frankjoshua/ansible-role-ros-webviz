@@ -2,7 +2,7 @@
 - name: Start {{ docker_name }} docker container
   docker_container:
     name: '{{ docker_name }}'
-    image: 'frankjoshua/ros-webviz'
+    image: 'frankjoshua/ros-webviz:{{ cpu_arch }}'
     ports:
       - '{{ port }}:8080'
     restart_policy: 'unless-stopped'
